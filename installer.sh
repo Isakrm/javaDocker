@@ -20,7 +20,7 @@ fi
 
 clear
 
-docker --version
+which docker
 
 if [ $? -eq 0 ]
 	then

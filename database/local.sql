@@ -7,5 +7,5 @@ pctg_disco_uso INT,
 qtd_processos INT,
 qtd_servicos INT,
 temp FLOAT,
-data_hora DATETIME,
+data_hora DATETIME
 );

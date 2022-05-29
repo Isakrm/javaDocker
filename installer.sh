@@ -48,7 +48,8 @@ sudo apt-get install mysql-client -y
 
 echo "usuario ingresse senha urubu100, usuario root senha urubu100"
 
-sudo docker exec -it ingressedb /bin/bash
+#Em caso de acesso manual ao banco utilizar:
+#sudo docker exec -it ingressedb /bin/bash
 
 
 

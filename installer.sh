@@ -6,30 +6,30 @@ clear
 
 java -version
 
-if [$? -eq 0]
-then
-echo ""
-else
-        sudo add-apt-repository ppa:webupd8team/java -y
-        clear
-        sudo apt update -y
-        clear
-        sudo apt install default-jre ; apt install openjdk-11-jre-headless; -y
-        clear
+if [ $? -eq 0 ]
+	then
+		echo ""
+	else
+		sudo add-apt-repository ppa:webupd8team/java -y
+		clear
+		sudo apt update -y
+		clear
+		sudo apt install default-jre ; apt install openjdk-11-jre-headless; -y
+		clear
 fi
 
 clear
 
 docker --version
 
-if [$? -eq 0]
-then
-echo ""
-else
-        sudo apt-get docker.io
-        clear
-        sudo docker pull mysql:5.7
-        clear
+if [ $? -eq 0 ]
+	then
+		echo ""
+	else
+		sudo apt-get docker.io
+		clear
+		sudo docker pull mysql:5.7
+		clear
 fi
 
 sudo systemctl start docker

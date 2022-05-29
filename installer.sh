@@ -26,7 +26,7 @@ if [ $? -eq 0 ]
 	then
 		echo ""
 	else
-		sudo apt-get install docker.io
+		sudo apt-get install docker.io -y
 		clear
 		sudo docker pull mysql:5.7
 		clear
@@ -46,9 +46,7 @@ sudo docker run -p3306:3306 -d --name ingressedb ingresse/local
 
 sudo apt-get install mysql-client -y
 
-sudo docker exec -it ingressedb /bin/bash
-
-mysql -uingresse -purubu100
+sudo docker exec -it ingressedb /bin/bash'mysql -uingresse -purubu100
 
 SHOW DATABASES;
 
@@ -56,6 +54,6 @@ USE logs-ingresse;
 
 SHOW TABLES;
 
-DESC logs;
+DESC logs;'
 
 

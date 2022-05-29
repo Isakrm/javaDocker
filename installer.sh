@@ -26,7 +26,7 @@ if [ $? -eq 0 ]
 	then
 		echo ""
 	else
-		sudo apt-get docker.io
+		sudo apt-get install docker.io
 		clear
 		sudo docker pull mysql:5.7
 		clear

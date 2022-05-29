@@ -46,15 +46,9 @@ sudo docker run -p3306:3306 -d --name ingressedb ingresse/local
 
 sudo apt-get install mysql-client -y
 
-sudo docker exec -it ingressedb /bin/bash'mysql -uingresse -purubu100
+echo "usuario ingresse senha urubu100, usuario root senha urubu100"
 
-'SHOW DATABASES;
+sudo docker exec -it ingressedb /bin/bash
 
-USE logs-ingresse;
-
-SHOW TABLES;
-
-DESC logs;'
-'
 
 

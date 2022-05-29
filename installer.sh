@@ -8,7 +8,7 @@ java -version
 
 if [$? -eq 0]
 then
-fi
+echo ""
 else
         sudo add-apt-repository ppa:webupd8team/java -y
         clear
@@ -24,7 +24,7 @@ docker --version
 
 if [$? -eq 0]
 then
-fi
+echo ""
 else
         sudo apt-get docker.io
         clear

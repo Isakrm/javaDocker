@@ -48,12 +48,13 @@ sudo apt-get install mysql-client -y
 
 sudo docker exec -it ingressedb /bin/bash'mysql -uingresse -purubu100
 
-SHOW DATABASES;
+'SHOW DATABASES;
 
 USE logs-ingresse;
 
 SHOW TABLES;
 
 DESC logs;'
+'
 
 

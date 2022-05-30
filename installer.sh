@@ -62,6 +62,8 @@ cd ..
 
 cd app
 
+sudo chmod 777 teste-1.0-SNAPSHOT-jar-with-dependencies.jar
+
 sudo docker build -t ingresse/app .
 
 cd ..

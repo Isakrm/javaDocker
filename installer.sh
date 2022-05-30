@@ -36,17 +36,45 @@ sudo systemctl start docker
 
 sudo systemctl enable docker
 
+sudo docker stop ingressedb
+
+sudo docker rm ingressedb
+
+sudo docker rmi ingresse/local
+
+sudo docker stop ingresseapp
+
+sudo docker rm ingresseapp
+
+sudo docker rmi ingresse/app
+
+sudo docker network rm ingresse/network
+
+sudo docker network create ingresse/network
+
 cd javaDocker
 
 cd database
 
 sudo docker build -t ingresse/local .
 
-sudo docker run -p3306:3306 -d --name ingressedb ingresse/local
+cd ..
+
+cd app
+
+sudo docker build -t ingresse/app .
+
+cd ..
+
+sudo docker run -p3306:3306 --net=ingresse/network -d --name ingressedb ingresse/local
 
 sudo apt-get install mysql-client -y
 
 echo "usuario ingresse senha urubu100, usuario root senha urubu100"
+
+sudo docker run --net=ingresse/network --name ingresse ingresse/app
+
+
 
 #Em caso de acesso manual ao banco utilizar:
 #sudo docker exec -it ingressedb /bin/bash

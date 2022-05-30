@@ -76,7 +76,7 @@ echo "usuario ingresse senha urubu100, usuario root senha urubu100"
 
 sudo docker run --net=ingresse/network --name ingresse ingresse/app
 
-
+sudo docker run -i -t ingresse/app -d -it --network ingresse/network --link ingressedb --name ingresse 
 
 #Em caso de acesso manual ao banco utilizar:
 #sudo docker exec -it ingressedb /bin/bash

@@ -1,5 +1,5 @@
 FROM openjdk:11
 COPY . /src/java
 WORKDIR /src/java
-RUN ["java","-jar","teste-1.0-SNAPSHOT-jar-with-dependencies.jar"]
+CMD ["java","-jar","teste-1.0-SNAPSHOT-jar-with-dependencies.jar"]
 ENTRYPOINT ["java","-jar","teste-1.0-SNAPSHOT-jar-with-dependencies.jar"]

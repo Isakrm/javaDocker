@@ -76,6 +76,8 @@ echo "usuario ingresse senha urubu100, usuario root senha urubu100"
 
 #sudo docker run --net=ingresse/network --name ingresse ingresse/app
 
+cd app
+
 java -jar javaVM.jar 
 
 #Em caso de acesso manual ao banco utilizar:

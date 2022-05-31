@@ -62,7 +62,7 @@ cd ..
 
 cd app
 
-sudo chmod 777 javaVM.jar
+sudo chmod 777 javaDocker.jar
 
 sudo docker build -t ingresse/app .
 
@@ -76,7 +76,7 @@ echo "usuario ingresse senha urubu100, usuario root senha urubu100"
 
 #sudo docker run --net=ingresse/network --name ingresse ingresse/app
 
-java -jar javaVM.jar 
+sudo docker run --network ingresse/network --link ingressedb --name ingresse --pid=host -it ingresse/app 
 
 #Em caso de acesso manual ao banco utilizar:
 #sudo docker exec -it ingressedb /bin/bash
